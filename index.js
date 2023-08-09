@@ -16,7 +16,7 @@ btn1.addEventListener("click", (e)=> {
     // response.style.visibility = "visible";
     response.style.background = "red";
     response.classList.add("show-response")
-    console.log(e.target)
+    // console.log(e.target)
 })
 
 btn2.addEventListener("click", (e)=> {
@@ -42,6 +42,16 @@ const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
 document.addEventListener("keypress", (e)=> {
-    // key.textContent = e.key
+    key.textContent = e.key
     // console.log(e)
+
+    if(e.key === "l"){
+        keypressContainer.style.backgroundColor = "red";
+    }else if(e.key === "g"){
+        keypressContainer.style.backgroundColor = "pink";
+    }
+
+
+
+
 })

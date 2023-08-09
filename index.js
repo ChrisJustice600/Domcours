@@ -41,6 +41,13 @@ window.addEventListener("mousemove", (e)=> {
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
+const ring = (key)=> {
+    const audio = new Audio();
+    audio.src = `${key}.mp3`
+    audio.play();
+}
+
+
 document.addEventListener("keypress", (e)=> {
     key.textContent = e.key
     // console.log(e)
@@ -51,7 +58,5 @@ document.addEventListener("keypress", (e)=> {
         keypressContainer.style.backgroundColor = "pink";
     }
 
-
-
-
+    ring(e.key)
 })

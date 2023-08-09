@@ -12,15 +12,18 @@ questionContainer.addEventListener("click", ()=> {
     questionContainer.classList.toggle("question-click");
 })
 
-btn1.addEventListener("click", ()=> {
+btn1.addEventListener("click", (e)=> {
     // response.style.visibility = "visible";
     response.style.background = "red";
     response.classList.add("show-response")
+    console.log(e.target)
 })
-btn2.addEventListener("click", ()=> {
+
+btn2.addEventListener("click", (e)=> {
     // response.style.visibility = "visible";
     response.style.background = "green";
     response.classList.add("show-response")
+
 })
 
 
@@ -29,7 +32,16 @@ btn2.addEventListener("click", ()=> {
 const mousemove = document.querySelector('.mousemove');
 
 window.addEventListener("mousemove", (e)=> {
-    console.log(e.pageX)
+    // console.log(e.pageX)
     mousemove.style.left = e.pageX + "px";
     mousemove.style.top = e.pageY + "px";
+})
+// ------------KEYPRESS EVENT
+
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+document.addEventListener("keypress", (e)=> {
+    // key.textContent = e.key
+    // console.log(e)
 })

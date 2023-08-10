@@ -41,25 +41,41 @@ window.addEventListener("mousemove", (e)=> {
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
+// const input = document.querySelector("input");
+const log = document.getElementById("log");
+
+log.onkeydown = logKey;
+
+function logKey(e) {
+//   log.textContent = log.textContent + e.key;
+    console.log(log.textContent)
+}
+
+
+
+
+
+
 const ring = (key)=> {
     const audio = new Audio();
     audio.src = `${key}.mp3`
     audio.play();
 }
 
+// document.addEventListener("keydown", (e)=> {
+//     // key.textContent = e.key
+//     // console.log(e)
 
-document.addEventListener("keypress", (e)=> {
-    key.textContent = e.key
-    // console.log(e)
+//     // if(e.key === "l"){
+//     //     keypressContainer.style.backgroundColor = "red";
+//     // }else if(e.key === "g"){
+//     //     keypressContainer.style.backgroundColor = "pink";
+//     // }
+//     // ring(e.key)
+// })
 
-    if(e.key === "l"){
-        keypressContainer.style.backgroundColor = "red";
-    }else if(e.key === "g"){
-        keypressContainer.style.backgroundColor = "pink";
-    }
-
-    ring(e.key)
-})
+///////////Keydown appreciated insteadof KEYPRESS
+// document.addEventListener("")
 
 ////////-----------------------
 //////Scroll Event

@@ -59,7 +59,7 @@ const ring = (key)=> {
 
 document.addEventListener("keydown", (e)=> {
     key.textContent = e.key
-    console.log(e)
+    // console.log(e)
 
     if(e.key === "l"){
         keypressContainer.style.backgroundColor = "red";
@@ -79,7 +79,7 @@ const nav = document.querySelector("nav")
 // console.log(nav)
 
 window.addEventListener("scroll", () => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     
     if(window.scrollY > 120) {
         nav.style.top = 0;
@@ -89,4 +89,14 @@ window.addEventListener("scroll", () => {
 })
 
 ////------------------------------------------
+/////////----------Input Event-----------
+const inputBox = document.querySelector("input[type='text']");
+const select  = document.getElementById("select");
+const valide = document.querySelector("input[type='submit']");
+// console.log(valide)
+
+valide.addEventListener("input", (e)=> {
+    e.preventDefault()
+})
+
 
